@@ -1,0 +1,226 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+html,
+body {
+  font-family: "poppins", sans-serif;
+  font-size: 16px;
+  height: 100vh;
+  width: 100%;
+}
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+#background {
+  background: linear-gradient(200deg, #3f415a 0%, #12172c 100%);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+  position: fixed;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.content {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  position: absolute;
+  top: 120px;
+  left: 0;
+  margin: 0 auto;
+}
+.search input {
+  width: 400px;
+  height: 50px;
+  border: none;
+  border-radius: 50px;
+  padding: 0.5rem 0.5rem 0.5rem 1.2rem;
+}
+
+input::placeholder {
+  margin-left: 40px;
+}
+input:focus {
+  outline: none;
+  box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+}
+
+.search button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  transform: translate(-60px, 0px)
+}
+
+.search button:hover {
+  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.5);
+}
+.search img {
+  width: 20px;
+  height: 20px;
+}
+
+.cards {
+  color: white;
+  width: 800px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.weather-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.weather-icon {
+  width: 140px;
+  height: 140px;
+}
+
+
+.weather-content h2 {
+  width: 325px;
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.weather-content h3 {
+  font-size: 4rem;
+  font-weight: 500;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.minMaxTemp {
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  gap: 50px;
+  letter-spacing: 1px;
+}
+
+.music-content {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: start;
+}
+.music-icon {
+  width: 40px;
+  height: 40px;
+}
+.music-content > div {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.music-content > div > h2 {
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 1px;
+}
+
+ul {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+}
+
+ul > li {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 10px;
+}
+
+ul > li:hover {
+  background: linear-gradient(200deg, #3f415a 0%, #12172c 100%);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5);
+  border-radius: 10px;
+}
+ul > li > img {
+  width: 30px;
+  height: 30px;
+}
+
+ul > li > .song-name {
+  width: 210px;
+  text-align: left;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+@media screen and (max-width: 660px) {
+  .search {
+    top: 20px;
+  }
+
+  .search > input {
+    width: 400px;
+    height: 50px;
+    border-radius: 30px;
+    transform: translate(20px, 0px);
+  }
+
+  .search > button {
+    transform: translate(-32px, 0px);
+  }
+
+  .cards {
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .weather-content {
+    margin-top: 200px;
+  }
+
+  .music-content {
+    width: 20rem;
+  }
+}

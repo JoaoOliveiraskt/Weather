@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <linkhttp://127.0.0.1:5500/index.html
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;600;700;800;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="/style/style.css" />
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="background"></div>
+      <div class="content">
+        <div class="search">
+          <input
+            id="search-input"
+            type="text"
+            placeholder="Where ?"
+          />
+          <button id="search-button">
+            <img src="/assets/search.svg" alt="" />
+          </button>
+        </div>
+
+        <div class="cards">
+          <div class="weather-content">
+            <img
+              class="weather-icon"
+              src="/assets/01n.svg"
+              alt="weather-icon"
+            />
+
+            <h2 class="city-name">Paris</h2>
+            <h3 class="Temperature">22º c</h3>
+
+            <div class="minMaxTemp">
+              <p class="maxTemp">Max: 23ºC</p>
+              <p class="minTemp">Min: 20ºC</p>
+            </div>
+          </div>
+
+          <div class="music-content">
+            <div>
+              <img
+                class="music-icon"
+                src="/assets/music.svg"
+                alt="weather-icon"
+              />
+              <h2 class="city-name">As mais tocadas de Paris</h2>
+            </div>
+
+            <ul>
+              <li>
+                <p class="rank">1</p>
+                <img src="/images/music1.png" alt="spotify-icon" />
+                <p class="song-name">song 1</p>
+              </li>
+              <li>
+                <p class="rank">2</p>
+                <img src="/images/music1.png" alt="spotify-icon" />
+                <p class="song-name">song 1</p>
+              </li>
+              <li>
+                <p class="rank">3</p>
+                <img src="/images/music1.png" alt="spotify-icon" />
+                <p class="song-name">song 1</p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="/scripts/script.js"></script>
+</html>
