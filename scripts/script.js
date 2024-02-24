@@ -3,7 +3,6 @@ const button = document.getElementById("search-button");
 const apiKey = "1edb8314218ef623105b01874e8689c0";
 
 const placeholderText = "Where ?"
-
 input.placeholder = placeholderText;
 
 input.addEventListener("blur", () => {
@@ -34,8 +33,10 @@ const searchCity = async (city) => {
       if(data.ok) {
         const result = await data.json();
         showWeather(result);
-        console.log(result);
-        return result;
+        
+        
+        console.log(result.sys.country);
+        searchTopAlbuns(result.sys.country);
       } else {
         throw new Error
       }
@@ -51,5 +52,11 @@ const showWeather = (data) => {
   document.querySelector(".temperature").innerHTML = `${data.main.temp.toFixed(0)}°C`;
   document.querySelector(".maxTemp").innerHTML = `Max: ${data.main.temp_max.toFixed(0)}°C`;
   document.querySelector(".minTemp").innerHTML = `Min: ${data.main.temp_min.toFixed(0)}°C`;
+  document.querySelector(".music-country-name").innerHTML = `Top Playtlists  ${data.sys.country}`;
+  
 }
 
+const cleanOnEnter = () => {
+  document.querySelector(".music-country-name").innerHTML = "";
+  document.querySelector(".playlist-box").innerHTML = "";
+}
